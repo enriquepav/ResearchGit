@@ -18,6 +18,7 @@
 		7C531C38281118A700A5297A /* ShowReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C531C37281118A700A5297A /* ShowReposViewController.swift */; };
 		7C531C3A2811258500A5297A /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C531C392811258500A5297A /* ReposViewController.swift */; };
 		7CB0018B28159E6600FB0AE9 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0018A28159E6600FB0AE9 /* RepoTableViewCell.swift */; };
+		7CBF37F1281619BF00589FD9 /* showQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF37F0281619BF00589FD9 /* showQuotesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		7C531C37281118A700A5297A /* ShowReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowReposViewController.swift; sourceTree = "<group>"; };
 		7C531C392811258500A5297A /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
 		7CB0018A28159E6600FB0AE9 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		7CBF37F0281619BF00589FD9 /* showQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showQuotesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				392F1FCD27783EDA0075A9BD /* Info.plist */,
 				392F1FC527783ED90075A9BD /* Travel.xcdatamodeld */,
 				7CB0018A28159E6600FB0AE9 /* RepoTableViewCell.swift */,
+				7CBF37F0281619BF00589FD9 /* showQuotesViewController.swift */,
 			);
 			path = Travel;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 				7CB0018B28159E6600FB0AE9 /* RepoTableViewCell.swift in Sources */,
 				7C531C3A2811258500A5297A /* ReposViewController.swift in Sources */,
 				7C531C38281118A700A5297A /* ShowReposViewController.swift in Sources */,
+				7CBF37F1281619BF00589FD9 /* showQuotesViewController.swift in Sources */,
 				392F1FBD27783ED90075A9BD /* AppDelegate.swift in Sources */,
 				392F1FBF27783ED90075A9BD /* SceneDelegate.swift in Sources */,
 			);

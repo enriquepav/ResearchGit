@@ -18,6 +18,10 @@ class ShowReposViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func mostrarQuotesPressed(_ sender: Any) {
+        performSegue(withIdentifier: "showQuotes", sender: self)
+        
+    }
     @IBAction func mostrarReposPressed(_ sender: Any) {
         performSegue(withIdentifier: "showRepos", sender: self)
     }
@@ -28,5 +32,4 @@ class ShowReposViewController: UIViewController {
             }
         }
     }
-    
 }

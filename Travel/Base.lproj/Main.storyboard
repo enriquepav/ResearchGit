@@ -218,7 +218,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="XJ2-F1-Rt3">
-                                <rect key="frame" x="55" y="248" width="304" height="129.33333333333337"/>
+                                <rect key="frame" x="55" y="248" width="304" height="182.33333333333337"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indica el Git-User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JNX-I4-vpV">
                                         <rect key="frame" x="86.000000000000014" y="0.0" width="132.33333333333337" height="20.333333333333332"/>
@@ -242,6 +242,14 @@
                                             <action selector="mostrarReposPressed:" destination="XeU-yv-pak" eventType="touchUpInside" id="IMc-Rg-pyJ"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sjq-ti-2eG">
+                                        <rect key="frame" x="55" y="151.33333333333331" width="194" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Recibe una Frase aleatoria"/>
+                                        <connections>
+                                            <action selector="mostrarQuotesPressed:" destination="XeU-yv-pak" eventType="touchUpInside" id="7kD-hm-YzX"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -257,6 +265,7 @@
                     <connections>
                         <outlet property="repoTextField" destination="yfD-dQ-1G6" id="VYd-Ac-fEk"/>
                         <segue destination="uWX-ny-c8j" kind="presentation" identifier="showRepos" modalPresentationStyle="fullScreen" id="a7V-kD-b4E"/>
+                        <segue destination="Ai7-nC-dII" kind="presentation" identifier="showQuotes" modalPresentationStyle="fullScreen" id="8i5-wD-FAT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLz-q0-HdW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -326,7 +335,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CP2-Vo-zXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3250.7246376811595" y="69.642857142857139"/>
+            <point key="canvasLocation" x="3419" y="-246"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oFA-dY-x6u">
@@ -345,6 +354,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWR-Wb-mKp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
+        </scene>
+        <!--Show Quotes View Controller-->
+        <scene sceneID="K2H-hf-7fc">
+            <objects>
+                <viewController id="Ai7-nC-dII" customClass="showQuotesViewController" customModule="ResearchGit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="c3T-0X-h38">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2h-5X-9n4">
+                                <rect key="frame" x="328" y="32" width="65" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cerrar"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="Ai7-nC-dII" eventType="touchUpInside" id="dTm-Ny-elK"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="UYl-e1-fgR">
+                                <rect key="frame" x="15" y="294" width="384" height="68.666666666666686"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGw-3x-m1j">
+                                        <rect key="frame" x="171.33333333333334" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1d-sL-hQP">
+                                        <rect key="frame" x="171.33333333333334" y="48.333333333333314" width="41.333333333333343" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0Rk-4l-zGd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UYl-e1-fgR" firstAttribute="leading" secondItem="0Rk-4l-zGd" secondAttribute="leading" constant="15" id="4BA-Kf-wf4"/>
+                            <constraint firstItem="UYl-e1-fgR" firstAttribute="top" secondItem="0Rk-4l-zGd" secondAttribute="top" constant="250" id="YA6-cs-B92"/>
+                            <constraint firstItem="0Rk-4l-zGd" firstAttribute="trailing" secondItem="UYl-e1-fgR" secondAttribute="trailing" constant="15" id="gRG-bC-3ki"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="labelQuote" destination="i1d-sL-hQP" id="lqR-ml-aYR"/>
+                        <outlet property="titleQuotes" destination="UGw-3x-m1j" id="oC4-zB-CTl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="na4-Ms-62x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3419" y="505"/>
         </scene>
     </scenes>
     <resources>
