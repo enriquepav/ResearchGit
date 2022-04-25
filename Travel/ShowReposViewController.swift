@@ -24,6 +24,7 @@ class ShowReposViewController: UIViewController {
     }
     @IBAction func mostrarReposPressed(_ sender: Any) {
         performSegue(withIdentifier: "showRepos", sender: self)
+        repoTextField.text = ""
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showRepos"{

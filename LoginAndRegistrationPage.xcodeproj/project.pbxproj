@@ -18,6 +18,7 @@
 		7C531C38281118A700A5297A /* ShowReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C531C37281118A700A5297A /* ShowReposViewController.swift */; };
 		7C531C3A2811258500A5297A /* ReposViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C531C392811258500A5297A /* ReposViewController.swift */; };
 		7CB0018B28159E6600FB0AE9 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB0018A28159E6600FB0AE9 /* RepoTableViewCell.swift */; };
+		7CB8926D28174E9100ECDECB /* Captain-Blackjack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CB8926C28174E9100ECDECB /* Captain-Blackjack.ttf */; };
 		7CBF37F1281619BF00589FD9 /* showQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF37F0281619BF00589FD9 /* showQuotesViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		7C531C37281118A700A5297A /* ShowReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowReposViewController.swift; sourceTree = "<group>"; };
 		7C531C392811258500A5297A /* ReposViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposViewController.swift; sourceTree = "<group>"; };
 		7CB0018A28159E6600FB0AE9 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
+		7CB8926C28174E9100ECDECB /* Captain-Blackjack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Captain-Blackjack.ttf"; sourceTree = "<group>"; };
 		7CBF37F0281619BF00589FD9 /* showQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showQuotesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,8 +83,17 @@
 				392F1FC527783ED90075A9BD /* Travel.xcdatamodeld */,
 				7CB0018A28159E6600FB0AE9 /* RepoTableViewCell.swift */,
 				7CBF37F0281619BF00589FD9 /* showQuotesViewController.swift */,
+				7CB8926B28174E5F00ECDECB /* fonts */,
 			);
 			path = Travel;
+			sourceTree = "<group>";
+		};
+		7CB8926B28174E5F00ECDECB /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7CB8926C28174E9100ECDECB /* Captain-Blackjack.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CB8926D28174E9100ECDECB /* Captain-Blackjack.ttf in Resources */,
 				392F1FCC27783EDA0075A9BD /* LaunchScreen.storyboard in Resources */,
 				392F1FC927783EDA0075A9BD /* Assets.xcassets in Resources */,
 				392F1FC427783ED90075A9BD /* Main.storyboard in Resources */,

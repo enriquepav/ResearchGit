@@ -14,9 +14,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        middleLabel.layer.masksToBounds = true
-        middleLabel.layer.cornerRadius = 8
-        
+      
         passwordText.isSecureTextEntry = true
         
     }
