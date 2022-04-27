@@ -8,11 +8,6 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Captain-Blackjack.ttf">
-            <string>Captain-Blackjack</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -22,11 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="center" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-EX-6Fs">
-                                <rect key="frame" x="15" y="280" width="384" height="277.33333333333326"/>
+                            <stackView opaque="NO" contentMode="center" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-EX-6Fs">
+                                <rect key="frame" x="15" y="238" width="384" height="374"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In to Continue" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hho-zV-r1s">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="42"/>
+                                        <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="30"/>
+                                        <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-Mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n6f-fX-fJw">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="34"/>
+                                        <rect key="frame" x="0.0" y="87" width="384" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="5eH-SL-r0v"/>
                                         </constraints>
@@ -34,7 +35,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SAH-dS-CWO">
-                                        <rect key="frame" x="0.0" y="64" width="384" height="34"/>
+                                        <rect key="frame" x="0.0" y="166" width="384" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="34" id="Lcg-0F-YsG"/>
                                         </constraints>
@@ -42,39 +43,51 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MS9-r1-Pfc">
-                                        <rect key="frame" x="0.0" y="128" width="384" height="31"/>
+                                        <rect key="frame" x="0.0" y="245" width="384" height="42"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Sign In">
+                                            <fontDescription key="titleFontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="20"/>
                                             <color key="baseBackgroundColor" red="0.18431372549019609" green="0.50196078431372548" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="signinClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dtF-mL-ves"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a member?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YtO-hs-hcg">
-                                        <rect key="frame" x="0.0" y="189" width="384" height="30"/>
-                                        <fontDescription key="fontDescription" name="Captain-Blackjack" family="Captain Blackjack" pointSize="30"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkH-e8-7SB">
-                                        <rect key="frame" x="0.0" y="249.00000000000003" width="384" height="28.333333333333343"/>
-                                        <color key="tintColor" red="0.23609401462543234" green="0.64343397241919198" blue="0.42610205755610947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Sign Up">
-                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleFootnote"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKU-8e-aoF"/>
-                                        </connections>
-                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tkQ-bd-0YT">
+                                        <rect key="frame" x="0.0" y="332" width="384" height="42"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not a member?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5q-k0-GA9">
+                                                <rect key="frame" x="0.0" y="7" width="260" height="28"/>
+                                                <color key="tintColor" red="0.18431372549019609" green="0.50196078431372548" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="20"/>
+                                                <color key="textColor" red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nkH-e8-7SB">
+                                                <rect key="frame" x="260" y="0.0" width="124" height="42"/>
+                                                <color key="tintColor" red="0.23609401462543234" green="0.64343397241919198" blue="0.42610205755610947" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Sign Up">
+                                                    <backgroundConfiguration key="background"/>
+                                                    <fontDescription key="titleFontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="20"/>
+                                                    <color key="baseForegroundColor" red="0.18431372549019609" green="0.50196078431372548" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="signUpClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kKU-8e-aoF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="nkH-e8-7SB" firstAttribute="centerX" secondItem="tkQ-bd-0YT" secondAttribute="centerX" constant="130" id="N55-BA-lMB"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UI Footer Design" translatesAutoresizingMaskIntoConstraints="NO" id="CH6-98-dMn">
-                                <rect key="frame" x="0.0" y="597" width="414" height="265"/>
+                                <rect key="frame" x="0.0" y="641" width="414" height="265"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="UI Header Design" translatesAutoresizingMaskIntoConstraints="NO" id="tzb-cO-XVH">
-                                <rect key="frame" x="0.0" y="-5" width="414" height="235"/>
+                                <rect key="frame" x="0.0" y="-10" width="414" height="235"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,11 +96,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dbU-EX-6Fs" secondAttribute="trailing" constant="15" id="Gpq-67-IpY"/>
                             <constraint firstItem="tzb-cO-XVH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MC0-9t-pLe"/>
                             <constraint firstItem="dbU-EX-6Fs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="TcK-wF-gTb"/>
-                            <constraint firstItem="tzb-cO-XVH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-5" id="b8b-Q3-DI9"/>
+                            <constraint firstItem="tzb-cO-XVH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-10" id="b8b-Q3-DI9"/>
                             <constraint firstItem="CH6-98-dMn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dpi-g1-i8A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CH6-98-dMn" secondAttribute="trailing" id="exy-p0-qbm"/>
-                            <constraint firstItem="dbU-EX-6Fs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="192" id="tzi-gE-XdR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CH6-98-dMn" secondAttribute="bottom" id="yx7-fq-EQG"/>
+                            <constraint firstItem="dbU-EX-6Fs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="150" id="tzi-gE-XdR"/>
+                            <constraint firstAttribute="bottom" secondItem="CH6-98-dMn" secondAttribute="bottom" constant="-10" id="yx7-fq-EQG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tzb-cO-XVH" secondAttribute="trailing" id="ziU-mI-2DL"/>
                         </constraints>
                     </view>
