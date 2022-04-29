@@ -4,7 +4,7 @@ import CoreData
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var middleLabel: UILabel!
+    
     @IBOutlet weak var mailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     

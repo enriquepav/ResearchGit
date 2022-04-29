@@ -10,15 +10,12 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var verifyPasswordText: UITextField!
     @IBOutlet weak var mailtext: UITextField!
     
-    @IBOutlet weak var middleLabel: UILabel!
+    
     
     var mailArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        middleLabel.layer.masksToBounds = true
-        middleLabel.layer.cornerRadius = 8
         
         passwordtext.isSecureTextEntry = true
         verifyPasswordText.isSecureTextEntry = true
