@@ -29,29 +29,10 @@ class showQuotesViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    func getQuotes(completed: @escaping(Quotes)-> Void){
-        if let url = URL(string: "https://animechan.vercel.app/api/random"){
-            URLSession.shared.dataTask(with: url){
-                data, response, error in
-                if let data = data {
-                    do {
-                        let res = try
-                        JSONDecoder().decode(Quotes.self,from: data)
-                        completed(res)
-                    }catch let error {
-                        print (error)
-                    }
-                }
-            }.resume()
-        }
-    }
+    
 
 }
-    struct Quotes:Codable{
-        let anime : String
-        let character : String
-        let quote : String
-    }
+    
     /*
     // MARK: - Navigation
 

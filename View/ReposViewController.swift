@@ -48,26 +48,6 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dismiss(animated: true, completion: nil)
     }
     
-    func getRepos(gitUser:String, completed: @escaping([Repo])->Void){
-        if let url = URL(string: "https://api.github.com/users/" + gitUser + "/repos"){
-            URLSession.shared.dataTask(with: url){
-                data, response, error in
-                if let data = data {
-                    do {
-                        let res = try JSONDecoder().decode([Repo].self, from: data)
-                        completed(res)
-                    }catch let error {
-                            print(error)
-                        }
-                        
-                    }
-                }.resume()
-        }
-    }
+   
 }
 
-struct Repo:Codable {
-    let name : String
-    let id : Int
-    
-}
