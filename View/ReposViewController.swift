@@ -9,24 +9,31 @@ import UIKit
 
 class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
   
+    @IBOutlet weak var userIdRepo: UILabel!
+    @IBOutlet weak var imageUserRepo: UIImageView!
     @IBOutlet weak var tableView: UITableView!
     var repos: [Repo] = []
     var gitUser: String = ""
+    var avatarUrl : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+        userIdRepo.text = gitUser
         
         getRepos(gitUser: gitUser){ result in
             self.repos = result
+            self.avatarUrl = (result.first?.owner.avatar_url)!
+            
             
             DispatchQueue.main.async {
                 
                 self.tableView.reloadData()
-            }
+                self.imageUserRepo.load(url:URL(string: self.avatarUrl)!)
+                
+                                   }
             
         }
 
@@ -51,3 +58,16 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
    
 }
 
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
+    }
+}
