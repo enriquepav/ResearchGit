@@ -10,4 +10,9 @@ import Foundation
 struct Repo:Codable {
     let name : String
     let id : Int
+    let language : String
+    let created_at : String
+    let updated_at : String
+    let url : String
+    let avatar_url : String
 }
