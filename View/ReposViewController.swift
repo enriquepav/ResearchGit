@@ -46,6 +46,7 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "repoCell", for: indexPath) as! RepoTableViewCell
+        cell.delegate = self
         
         cell.repo = repos[indexPath.row]
         
@@ -57,7 +58,19 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
    
 }
-
+extension ReposViewController : RepoTableViewCellDelegate {
+    
+    func showDetail(repo: Repo?) {
+        let storyBoardMain = UIStoryboard (name: "Main", bundle: .main)
+        if let vc = storyBoardMain.instantiateViewController(withIdentifier: "popUp") as? PopUpViewController{
+            vc.modalPresentationStyle = .overFullScreen
+            vc.modalTransitionStyle = .crossDissolve
+            vc.definesPresentationContext = true
+            
+            present(vc, animated: true, completion: nil)
+        }
+    }
+}
 extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in
