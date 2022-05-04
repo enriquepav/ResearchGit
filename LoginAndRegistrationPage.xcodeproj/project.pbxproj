@@ -24,6 +24,7 @@
 		7CB5C856281F2F9500B9B18F /* ViewModelgetQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CB5C855281F2F9500B9B18F /* ViewModelgetQuotes.swift */; };
 		7CB8926D28174E9100ECDECB /* Captain-Blackjack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CB8926C28174E9100ECDECB /* Captain-Blackjack.ttf */; };
 		7CBF37F1281619BF00589FD9 /* showQuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF37F0281619BF00589FD9 /* showQuotesViewController.swift */; };
+		A247939C2821BED100A094D9 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A247939B2821BED100A094D9 /* ApiClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		7CB5C855281F2F9500B9B18F /* ViewModelgetQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelgetQuotes.swift; sourceTree = "<group>"; };
 		7CB8926C28174E9100ECDECB /* Captain-Blackjack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Captain-Blackjack.ttf"; sourceTree = "<group>"; };
 		7CBF37F0281619BF00589FD9 /* showQuotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showQuotesViewController.swift; sourceTree = "<group>"; };
+		A247939B2821BED100A094D9 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 		392F1FB027783ED80075A9BD = {
 			isa = PBXGroup;
 			children = (
+				A247939A2821BEC200A094D9 /* Network */,
 				7CB5C84E281F050100B9B18F /* ViewModel */,
 				7CB5C84D281F04F700B9B18F /* View */,
 				7CB5C84C281F04EE00B9B18F /* Model */,
@@ -130,6 +133,14 @@
 				7CB8926C28174E9100ECDECB /* Captain-Blackjack.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		A247939A2821BEC200A094D9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A247939B2821BED100A094D9 /* ApiClient.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 				7CB0018B28159E6600FB0AE9 /* RepoTableViewCell.swift in Sources */,
 				7C531C3A2811258500A5297A /* ReposViewController.swift in Sources */,
 				7CB5C852281F2D4400B9B18F /* Quotes.swift in Sources */,
+				A247939C2821BED100A094D9 /* ApiClient.swift in Sources */,
 				7C531C38281118A700A5297A /* ShowReposViewController.swift in Sources */,
 				7CBF37F1281619BF00589FD9 /* showQuotesViewController.swift in Sources */,
 				7CB5C856281F2F9500B9B18F /* ViewModelgetQuotes.swift in Sources */,

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h9e-DP-7mc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h9e-DP-7mc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -336,6 +336,7 @@
         <!--Navigation Controller-->
         <scene sceneID="oFA-dY-x6u">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RWR-Wb-mKp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="h9e-DP-7mc" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vaw-uV-P87">
@@ -347,7 +348,6 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="52L-XQ-7aW"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="RWR-Wb-mKp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
@@ -360,16 +360,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalCentering" alignment="center" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="UYl-e1-fgR">
-                                <rect key="frame" x="15" y="294" width="384" height="82"/>
+                                <rect key="frame" x="15" y="294" width="384" height="45"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGw-3x-m1j">
-                                        <rect key="frame" x="0.0" y="0.0" width="384" height="18.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGw-3x-m1j">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="0.0"/>
                                         <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1d-sL-hQP">
-                                        <rect key="frame" x="0.0" y="63.5" width="384" height="18.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i1d-sL-hQP">
+                                        <rect key="frame" x="0.0" y="45" width="384" height="0.0"/>
                                         <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -394,19 +394,27 @@
                                     <action selector="buttonPressed:" destination="Ai7-nC-dII" eventType="touchUpInside" id="dTm-Ny-elK"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="center" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-u1-DR6">
+                                <rect key="frame" x="187" y="429" width="41" height="38"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0Rk-4l-zGd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0Rk-4l-zGd" firstAttribute="trailing" secondItem="3lP-u1-DR6" secondAttribute="trailing" constant="186" id="0tq-zn-KWO"/>
                             <constraint firstItem="UYl-e1-fgR" firstAttribute="leading" secondItem="0Rk-4l-zGd" secondAttribute="leading" constant="15" id="4BA-Kf-wf4"/>
                             <constraint firstItem="0Rk-4l-zGd" firstAttribute="bottom" secondItem="rqk-BL-l6U" secondAttribute="bottom" id="5Vh-Z2-pZk"/>
+                            <constraint firstItem="3lP-u1-DR6" firstAttribute="leading" secondItem="0Rk-4l-zGd" secondAttribute="leading" constant="187" id="Hsg-58-XxR"/>
+                            <constraint firstItem="3lP-u1-DR6" firstAttribute="top" secondItem="0Rk-4l-zGd" secondAttribute="top" constant="385" id="XXh-t1-CwB"/>
                             <constraint firstItem="UYl-e1-fgR" firstAttribute="top" secondItem="0Rk-4l-zGd" secondAttribute="top" constant="250" id="YA6-cs-B92"/>
                             <constraint firstItem="0Rk-4l-zGd" firstAttribute="trailing" secondItem="rqk-BL-l6U" secondAttribute="trailing" id="dnW-tz-hV3"/>
                             <constraint firstItem="rqk-BL-l6U" firstAttribute="leading" secondItem="0Rk-4l-zGd" secondAttribute="leading" id="evx-od-FK6"/>
                             <constraint firstItem="0Rk-4l-zGd" firstAttribute="trailing" secondItem="UYl-e1-fgR" secondAttribute="trailing" constant="15" id="gRG-bC-3ki"/>
+                            <constraint firstItem="0Rk-4l-zGd" firstAttribute="bottom" secondItem="3lP-u1-DR6" secondAttribute="bottom" constant="395" id="vZm-IA-Pq7"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="3lP-u1-DR6" id="owK-bj-kTU"/>
                         <outlet property="labelQuote" destination="i1d-sL-hQP" id="lqR-ml-aYR"/>
                         <outlet property="titleQuotes" destination="UGw-3x-m1j" id="oC4-zB-CTl"/>
                     </connections>
