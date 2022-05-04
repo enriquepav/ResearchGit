@@ -16,3 +16,4 @@ struct Repo:Codable {
     let url : String
     let avatar_url : String
 }
+// agregar nuevas variables
