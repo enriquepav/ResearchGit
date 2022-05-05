@@ -34,8 +34,7 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.imageUserRepo.load(url:URL(string: self.avatarUrl)!)
                 
                                    }
-            
-        }
+            }
 
         // Do any additional setup after loading the view.
     }
@@ -66,6 +65,7 @@ extension ReposViewController : RepoTableViewCellDelegate {
             vc.modalPresentationStyle = .overFullScreen
             vc.modalTransitionStyle = .crossDissolve
             vc.definesPresentationContext = true
+            vc.repo = repo!
             
             present(vc, animated: true, completion: nil)
         }
