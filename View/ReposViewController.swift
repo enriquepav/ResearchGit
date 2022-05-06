@@ -16,6 +16,8 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var gitUser: String = ""
     var avatarUrl : String = ""
     
+    private var reposViewModel : ViewModelgetRepos!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,20 +25,29 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableView.dataSource = self
         userIdRepo.text = gitUser
         
-        getRepos(gitUser: gitUser){ result in
-            self.repos = result
-            self.avatarUrl = (result.first?.owner.avatar_url)!
-            
-            
-            DispatchQueue.main.async {
-                
-                self.tableView.reloadData()
-                self.imageUserRepo.load(url:URL(string: self.avatarUrl)!)
-                
-                                   }
-            }
-
+        initViewModel()
+        callToViewModelForUIUpdate()
         // Do any additional setup after loading the view.
+    }
+    
+    // este método inicializa el viewmodel
+    func initViewModel(){
+        self.reposViewModel =  ViewModelgetRepos()
+        
+        //hacemos el llamado de la data porque necesitamos enviarle un gitUser
+        self.reposViewModel.callFuncToGetRepos(gitUser: gitUser)
+        
+        //observamos el showloading
+        reposViewModel.showLoading = {
+            DispatchQueue.main.async {
+            }
+        }
+        
+        //observamos el hideLoading
+        reposViewModel.hideLoading = {
+            DispatchQueue.main.async {
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,8 +66,30 @@ class ReposViewController: UIViewController, UITableViewDelegate, UITableViewDat
         dismiss(animated: true, completion: nil)
     }
     
-   
+    func callToViewModelForUIUpdate(){
+           
+           self.reposViewModel.bindReposViewModelToController = {
+               // al completar la respuesta se ejete un update data ya que es un observer
+               self.updateData()
+           }
+    }
+    
+    func updateData(){
+        DispatchQueue.main.async {
+            // aquí accedemos a la data que se queda almacenada en el viewmodel en nuestra variable "quoteData"
+            // de esa forma usamos el contenido y solo mostramos los datos que necesitamos
+            self.repos = self.reposViewModel.reposData
+            self.avatarUrl = (self.reposViewModel.reposData.first?.owner.avatar_url)!
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.imageUserRepo.load(url:URL(string: self.avatarUrl)!)
+            }
+        }
+    }
+    
 }
+
 extension ReposViewController : RepoTableViewCellDelegate {
     
     func showDetail(repo: Repo?) {
@@ -71,6 +104,7 @@ extension ReposViewController : RepoTableViewCellDelegate {
         }
     }
 }
+
 extension UIImageView {
     func load(url: URL) {
         DispatchQueue.global().async { [weak self] in

@@ -29,6 +29,7 @@ class ViewModelgetQuotes : NSObject {
     override init() {
         super.init()
         self.apiClient =  ApiClient()
+        //hacemos el llamado de la data al inicializar el viewmodel ya que no depende de algún valor externo
         callFuncToGetQuotes()
     }
     
