@@ -19,27 +19,19 @@ class PopUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameRepo.text = "El Nombre del repositorio es: " + repo.name
-        idRepo.text = "El ID del repositorio es " + String (repo.id)
+        nameRepo.text = "El Nombre del repositorio es: \n" + repo.name
+        idRepo.text = "El ID del repositorio es: \n" + String (repo.id)
         if (repo.language == nil){
             languageRepo.text = "El repositorio tiene un lenguaje no especificado"}
         else {
-            languageRepo.text = "El repositorio usa el lenguaje:" + repo.language!
+            languageRepo.text = "El repositorio usa el lenguaje: \n" + repo.language!
         }
-        createdRepo.text = "La fecha de creación:" + repo.created_at
-        updateRepo.text = "La última modificación:" + repo.updated_at
-        urlRepo.text = "Repositorio URL:" + repo.url
-        
+        createdRepo.text = "La fecha de creación: \n" + repo.created_at
+        updateRepo.text = "La última modificación: \n" + repo.updated_at
+        urlRepo.text = "Repositorio URL: \n" + repo.url
     }
     
     @IBAction func didTapBackground(_ sender: Any) {
         dismiss(animated: true)
-        }
-    
-        
-
-        // Do any additional setup after loading the view.
-    
-    
-    
+    }
 }
