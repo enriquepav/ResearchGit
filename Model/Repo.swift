@@ -8,16 +8,16 @@
 import Foundation
 
 struct Repo:Codable {
-    let name : String
-    let id : Int
-    let language : String?
-    let created_at : String
-    let updated_at : String
-    let url : String
-    let owner : Owner
+    var name : String = ""
+    var id : Int = 0
+    var language : String? = ""
+    var created_at : String = ""
+    var updated_at : String = ""
+    var url : String = ""
+    var owner : Owner = Owner()
 }
 
 struct Owner:Codable{
-    let avatar_url : String
+    var avatar_url : String = ""
 }
 // agregar nuevas variables

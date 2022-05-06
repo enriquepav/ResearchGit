@@ -6,6 +6,9 @@
 //
 
 import UIKit
+protocol RepoTableViewCellDelegate {
+    func showDetail (repo:Repo?)
+}
 
 class RepoTableViewCell: UITableViewCell {
     
@@ -16,7 +19,8 @@ class RepoTableViewCell: UITableViewCell {
             repoLabel.text = repo.name
         }
     }
-
+    var delegate : RepoTableViewCellDelegate?
+    
     @IBOutlet weak var repoLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,5 +32,8 @@ class RepoTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    @IBAction func detailsButtonPressed(_ sender: Any) {
+        delegate?.showDetail(repo: repo)
+      
+    }
 }

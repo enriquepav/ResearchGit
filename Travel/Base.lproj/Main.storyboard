@@ -306,7 +306,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Details"/>
                                                     <connections>
-                                                        <segue destination="0rR-z1-Uce" kind="show" id="yr7-d9-ml2"/>
+                                                        <action selector="detailsButtonPressed:" destination="jXx-St-nPH" eventType="touchUpInside" id="Yl0-gL-5PU"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -366,16 +366,24 @@
         <!--Pop Up View Controller-->
         <scene sceneID="wX7-WO-kgB">
             <objects>
-                <viewController id="0rR-z1-Uce" customClass="PopUpViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="popUp" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0rR-z1-Uce" customClass="PopUpViewController" customModule="ResearchGit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Cr-Mp-DK9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2cw-xD-mVi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title=""/>
+                                <connections>
+                                    <action selector="didTapBackground:" destination="0rR-z1-Uce" eventType="touchUpInside" id="ni2-g9-lT7"/>
+                                </connections>
+                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d1k-DG-CAG">
-                                <rect key="frame" x="41" y="177" width="332" height="488"/>
+                                <rect key="frame" x="41" y="221" width="332" height="454"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="qhy-kb-j8y">
-                                        <rect key="frame" x="42" y="155" width="248.5" height="178"/>
+                                        <rect key="frame" x="42" y="138" width="248.5" height="178"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="77" translatesAutoresizingMaskIntoConstraints="NO" id="AIx-Dq-pGi">
                                                 <rect key="frame" x="16.5" y="0.0" width="215" height="20.5"/>
@@ -436,7 +444,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="qhy-kb-j8y" firstAttribute="centerY" secondItem="d1k-DG-CAG" secondAttribute="centerY" id="iYy-sM-qFt"/>
                                     <constraint firstItem="qhy-kb-j8y" firstAttribute="centerX" secondItem="d1k-DG-CAG" secondAttribute="centerX" id="zPV-kT-9l2"/>
@@ -444,10 +452,14 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S5U-bN-nkk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.29348776223776224" alpha="0.47371917517006801" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="S5U-bN-nkk" firstAttribute="trailing" secondItem="2cw-xD-mVi" secondAttribute="trailing" id="290-2H-wQT"/>
+                            <constraint firstItem="2cw-xD-mVi" firstAttribute="leading" secondItem="S5U-bN-nkk" secondAttribute="leading" id="MH4-PP-GHH"/>
                             <constraint firstItem="d1k-DG-CAG" firstAttribute="centerY" secondItem="5Cr-Mp-DK9" secondAttribute="centerY" id="Z6w-tK-ZAf"/>
                             <constraint firstItem="d1k-DG-CAG" firstAttribute="centerX" secondItem="5Cr-Mp-DK9" secondAttribute="centerX" id="gCo-aj-6Vy"/>
+                            <constraint firstItem="2cw-xD-mVi" firstAttribute="top" secondItem="S5U-bN-nkk" secondAttribute="top" id="mhY-Kp-W4v"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="2cw-xD-mVi" secondAttribute="bottom" id="nTg-Sp-B8g"/>
                             <constraint firstItem="d1k-DG-CAG" firstAttribute="leading" secondItem="S5U-bN-nkk" secondAttribute="leading" constant="41" id="nwk-OO-g9S"/>
                             <constraint firstItem="d1k-DG-CAG" firstAttribute="top" secondItem="S5U-bN-nkk" secondAttribute="top" constant="177" id="oKV-5M-Owz"/>
                         </constraints>
